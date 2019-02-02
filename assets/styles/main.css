@@ -1,0 +1,141 @@
+:root {
+    --title-colour: #2f2f2f;
+    --bg-colour: #ffff00;
+    --control-colour: #fff;
+    --control-border-colour: #eee;
+    --control-bg-colour: #000;
+}
+
+body {
+    margin: 0;
+    font-weight: 100;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Gotham-medium', Arial, sans-serif;
+    font-display: swap;
+    user-select: none;
+}
+
+.visible {
+    display: inline-block;
+}
+
+.hidden {
+    display: none;
+}
+
+#container {
+    margin: 3em;
+}
+
+.flex-container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+h1 {
+    color: var(--title-colour);
+    font-weight: 100;
+    font-size: 15vmin;
+    padding-top: 6vmin;
+    transition: 0.5s ease;
+}
+
+input[type='range'] {
+    background: var(--control-bg-colour);
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    height: 6px;
+    border-radius: 999px;
+    outline: none;
+}
+
+.flat-button {
+    padding: 15px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    background: #fff;
+    border: 2px solid black;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+.flat-button:after {
+    position: absolute;
+    background-color: var(--control-bg-colour);
+    height: 100%;
+    width: 100%;
+    top: 4px;
+    left: 4px;
+    z-index: -1;
+    content: '';
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.flat-button:hover {
+    top: 2px;
+    left: 2px;
+}
+
+.flat-button:hover:after {
+    top: -2px;
+    left: -2px;
+}
+
+#umbrella-button {
+    border: none;
+    background: none;
+    margin-top: 3vmin;
+    outline: none;
+    cursor: pointer;
+}
+
+#umbrella-logo {
+    width: 22vmin;
+    transition: transform 1s;
+}
+
+.rotate {
+    transform: rotate(-360deg);
+}
+
+@-webkit-keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@font-face {
+    font-family: 'Gotham-medium';
+    src: url('../fonts/gotham-medium.woff2') format('woff2');
+    font-display: swap;
+}

@@ -1,0 +1,71 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Fidget</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Soothing rain sounds to help you concentrate ☔️">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://whiteswift.github.io/fidget-pwa/">
+  <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Fidget ☔️">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Fidget ☔️">
+  <link rel="icon" sizes="144x144" href="assets/images/fidget_144.png">
+  <meta name="theme-color" content="#00abff">
+  <meta property="og:title" content="Fidget ☔️">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://whiteswift.github.io/fidget-pwa/">
+  <meta property="og:description" content="">
+  <style>
+    body {
+      background-color: #ffff00;
+      text-align: center;
+    }
+  </style>
+  <link rel='stylesheet' type='text/css' href='assets/styles/main.css' />
+</head>
+
+<body>
+  <div id='fidget' class='flex-container'>
+    <h1 id='status'>Fidget</h1>
+    <div id='container'>
+      Make a dashboard/control panel with a smiley face
+      <textarea>textarea</textarea>
+      <button class='flat-button'>PRESS ME</button>
+      <div>Counter</div>
+      <input type='checkbox' />
+      <input type='range' min="0" max="360" step="1" width="1" />
+      <form>
+        <progress></progress>
+
+        <input type='radio' name='radios' />
+        <input type='radio' name='radios' />
+      </form>
+      <div id='button-container'>
+        <button id='umbrella-button' class='visible'>
+          <img id='umbrella-logo' class='rotate' src='assets/images/rain.svg' />
+        </button>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    // if ('serviceWorker' in navigator) {
+    //   navigator.serviceWorker.register('umbrella_sw.js', {
+    //     scope: './'
+    //   })
+    //     .then(function (reg) {
+    //       console.log(`Service Worker Registered. Scope: ${reg.scope}`);
+    //     });
+
+    //   navigator.serviceWorker.ready.then(function (reg) {
+    //     console.log('Service Worker Ready');
+    //   })
+    // }
+  </script>
+  <script async src='assets/scripts/main.js'></script>
+</body>
+
+</html>
